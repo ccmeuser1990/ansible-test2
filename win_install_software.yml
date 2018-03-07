@@ -1,6 +1,6 @@
  ---
  - name: Softwareverteilung Windows
-   hosts: windows
+   hosts: all
    become: yes
    
    tasks:
