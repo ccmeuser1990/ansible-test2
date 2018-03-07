@@ -12,7 +12,7 @@
       with_items:
         - httpd
         - mysql
-        - php5
+        - php
         
     - name: Start and Enable httpd
       service:  
