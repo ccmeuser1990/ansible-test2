@@ -25,11 +25,11 @@
     - name: Copy install files for 7zip
       win_copy:
         src: ./7zip.msi
-        dest: C:\Windows\Temp\npp.msi
+        dest: C:\Windows\Temp\7zip.msi
         
     - name: install app 7zip
       win_msi:
-        path: C:\Windows\Temp\npp.msi
+        path: C:\Windows\Temp\7zip.msi
         wait: yes
         
     - name: Remove install files
