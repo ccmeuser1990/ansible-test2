@@ -6,19 +6,19 @@
    tasks:
     
     - name: Copy install files to remote hosts
-        win_copy:
-          src: npp.7.5.4.installer.x64.msi
-          dest: c:\Windows\Temp\npp.msi
+      win_copy:
+        src: npp.7.5.4.installer.x64.msi
+        dest: c:\Windows\Temp\npp.msi
       
     - name: install app: notepad++
-        win_msi:
-          path: c:\Windows\Temp\npp.msi
-          wait: yes
+      win_msi:
+        path: c:\Windows\Temp\npp.msi
+        wait: yes
 
     - name: Remove install files on remote hosts
-        win_file:
-          path: c:\Windows\Temp\npp.msi
-          state: absent
+      win_file:
+        path: c:\Windows\Temp\npp.msi
+        state: absent
           
           
     
