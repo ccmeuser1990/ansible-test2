@@ -1,0 +1,20 @@
+ ---
+ - name: Softwareverteilung Windows
+   hosts: windows
+   become: yes
+   
+   tasks:
+    
+    - name: Copy install files to remote hosts
+      
+      
+    - name: install app: teamviewer
+    
+    
+    - name: install app: notepad++
+    
+    
+    - name: Remove install files on remote hosts
+    
+    
+    
