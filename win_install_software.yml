@@ -10,12 +10,12 @@
         src: ./npp.msi
         dest: C:\Windows\Temp\npp.msi
         
-    - name: install app: notepad
+    - name: install app notepad++
       win_msi:
         path: C:\Windows\Temp\npp.msi
         wait: yes
-#        
-#    - name: Remove install files on remote hosts
-#      win_file:
-#        path: C:\Windows\Temp\npp.msi
-#        state: absent
+        
+    - name: Remove install files on remote hosts
+      win_file:
+        path: C:\Windows\Temp\npp.msi
+        state: absent
