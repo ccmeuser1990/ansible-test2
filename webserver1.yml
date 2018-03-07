@@ -7,9 +7,9 @@
     
     - name: Install packages
       yum:
-        name: {{ items }}
+        name: "{{ item }}"
         state: present
-      with_item:
+      with_items:
         - httpd
         - mysql
         - php5
