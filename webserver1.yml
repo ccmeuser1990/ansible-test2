@@ -1,1 +1,17 @@
-
+---
+- name: Install webserver
+  hosts: all
+  become: yes
+  
+  tasks:
+    
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: latest
+        
+    - name: Start and Enable httpd
+        name: httpd
+        state: started
+        enabled: yes
+        
