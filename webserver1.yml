@@ -5,10 +5,14 @@
   
   tasks:
     
-    - name: Install httpd
+    - name: Install packages
       yum:
-        name: httpd
+        name: {{ item }}
         state: present
+      with_item:
+        - httpd
+        - mysql
+        - php5
         
     - name: Start and Enable httpd
       service:  
