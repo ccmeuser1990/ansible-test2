@@ -5,17 +5,37 @@
    
   tasks:
     
-    - name: Copy install files to remote hosts
+    - name: Copy install files for Notepad++
       win_copy:
         src: ./npp.msi
         dest: C:\Windows\Temp\npp.msi
         
-    - name: install app notepad++
+    - name: install notepad++
       win_msi:
         path: C:\Windows\Temp\npp.msi
         wait: yes
         
-    - name: Remove install files on remote hosts
+    - name: Remove install files
       win_file:
         path: C:\Windows\Temp\npp.msi
         state: absent
+        
+############
+
+    - name: Copy install files for 7zip
+      win_copy:
+        src: ./7zip.msi
+        dest: C:\Windows\Temp\npp.msi
+        
+    - name: install app 7zip
+      win_msi:
+        path: C:\Windows\Temp\npp.msi
+        wait: yes
+        
+    - name: Remove install files
+      win_file:
+        path: C:\Windows\Temp\7zip.msi
+        state: absent
+       
+        
+
