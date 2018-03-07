@@ -8,7 +8,7 @@
     
     - name: Copy install files to remote hosts
       win_copy:
-        src: npp.7.5.4.installer.x64.msi
+        src: npp.msi
         dest: "C:\Windows\Temp\npp.msi"
         
     - name: install app: notepad
