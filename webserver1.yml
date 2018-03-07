@@ -11,6 +11,7 @@
         state: latest
         
     - name: Start and Enable httpd
+      service:  
         name: httpd
         state: started
         enabled: yes
