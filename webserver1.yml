@@ -5,14 +5,13 @@
   
   tasks:
     
-    - name: Install httpd
-      yum:
-        name: httpd
-        state: present
-        
     - name: Start and Enable httpd
       service:  
         name: httpd
-        state: started
+        state: stopped
         enabled: yes
-        
+    
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: absent
